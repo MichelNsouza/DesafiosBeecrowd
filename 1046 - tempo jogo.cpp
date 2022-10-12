@@ -1,20 +1,18 @@
 #include <stdio.h>
+ 
+int main() { 
+    
+    int inicio, fim;
 
-int main()
-{
-    int tinicial, tfinal, resposta;
+    scanf("%d %d", &inicio, &fim);
     
-    scanf("%d %d", &tinicial, &tfinal);
-    
-    if(tinicial > tfinal ){
-        resposta = (tinicial - 4) - tfinal;
-    }else if(tinicial < tfinal){
-        resposta = tfinal - tinicial;
-    }else if(tinicial == tfinal){
-        resposta = 24;
+    if (inicio > fim) { 
+        printf("O JOGO DUROU %d HORA(S)\n", 24 - (inicio - fim));
+    } else if (fim > inicio) {
+        printf("O JOGO DUROU %d HORA(S)\n", fim - inicio);
+    } else {
+        printf("O JOGO DUROU 24 HORA(S)\n");
     }
     
-    printf("O JOGO DUROU %d HORA(S)\n", resposta );
-
     return 0;
 }
